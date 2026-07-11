@@ -476,11 +476,15 @@
     formContatto.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      const nome = document.getElementById("id-nome").value;
-      const email = document.getElementById("id-email").value;
-      const messaggio = document.getElementById("id-messaggio").value;
+      const nome = document.getElementById("id-nome").value.trim();
+      const email = document.getElementById("id-email").value.trim();
+      const messaggio = document.getElementById("id-messaggio").value.trim();
 
-      const datiForm = { nome, email, messaggio };
+      const datiForm = {
+        nome,
+        email,
+        messaggio,
+      };
 
       try {
         const response = await fetch("/api/contact", {
@@ -494,11 +498,10 @@
         const risultato = await response.json();
 
         if (response.ok) {
-          window.location.href = "grazie.html";
           formContatto.reset();
+          window.location.href = "grazie.html";
         } else {
-          const risultato = await response.json();
-          alert("Errore: " + risultato.errore);
+          alert("Errore: " + (risultato.errore || "Invio non riuscito"));
         }
       } catch (error) {
         console.error("Errore di connessione:", error);
