@@ -18,6 +18,14 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EMAIL_PASS,
   },
 });
+
+transporter.verify((errore, success) => {
+  if (errore) {
+    console.error("Errore connessione Gmail", errore);
+  } else {
+    console.log("Connessione Gmail riuscita");
+  }
+});
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
