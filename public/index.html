@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      #intro {
+        color: white;
+        font-size: 45px;
+      }
+      .box {
+        margin: 40px;
+      }
+      .product {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 330px;
+      }
+      .product .img {
+        width: 330px;
+        height: 200px;
+        overflow: hidden;
+      }
+      .product .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .product .titleProduct {
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: #c2964b;
+        font-size: 28px;
+      }
+      .titleProduct {
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: #c2964b;
+        font-size: 28px;
+      }
+      .descProduct {
+        display: flex;
+        margin-top: 5px;
+        color: dimgrey;
+      }
+      #scopri,
+      #scopriGelati,
+      #scopriPasticceria,
+      #scopriDrink {
+        display: flex;
+        padding: 10px;
+        margin-top: 15px;
+        justify-content: center;
+        width: 35%;
+        background-color: #d4b47c;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .come {
+        display: flex;
+        background-color: #d4b47c;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 40px;
+        width: 100%;
+        gap: 40px;
+        flex-direction: column;
+      }
+      .contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 50px;
+      }
+      input {
+        height: 35px;
+        border: 1px solid rgb(175, 172, 172);
+        margin-top: 10px;
+        padding: 5px;
+        margin-bottom: 15px;
+      }
+      textarea {
+        height: 90px;
+        border: 1px solid rgb(175, 172, 172);
+        margin-top: 10px;
+        padding: 5px;
+        margin-bottom: 15px;
+      }
+      .social {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .social img {
+        background-size: contain;
+        overflow: hidden;
+      }
+
+      #scopri:hover,
+      #scopriGelati:hover,
+      #scopriPasticceria:hover,
+      #scopriDrink:hover {
+        background-color: #e5b45f;
+        transform: scale(1.02);
+      }
+      @media (max-width: 768px) {
+        #intro {
+          font-size: 28px;
+          text-align: center;
+        }
+
+        .box {
+          margin: 20px;
+        }
+
+        .start {
+          flex-direction: column;
+          gap: 15px;
+          padding: 15px;
+        }
+
+        nav {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+        }
+
+        /* Intro */
+        .intro {
+          align-items: center;
+          text-align: center;
+          padding: 20px;
+        }
+
+        .intro span br {
+          display: none;
+        }
+
+        .box > div {
+          flex-direction: column !important;
+          align-items: center !important;
+          gap: 30px;
+        }
+
+        .product {
+          width: 100%;
+          max-width: 350px;
+        }
+
+        .product .img {
+          width: 100%;
+        }
+
+        #scopri,
+        #scopriGelati,
+        #scopriPasticceria,
+        #scopriDrink {
+          width: 100%;
+        }
+
+        /* Chi siamo */
+        img[src="barfuori.jpg"] {
+          width: 100%;
+          height: auto;
+        }
+
+        div[style*="border: 1px solid"] {
+          flex-direction: column;
+        }
+
+        div[style*="border: 1px solid"] > div {
+          margin: 20px;
+          text-align: center;
+        }
+        .contact {
+          flex-direction: column;
+          gap: 40px;
+          padding: 20px;
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          box-sizing: border-box;
+        }
+
+        iframe {
+          width: 100%;
+          height: 250px;
+        }
+        .come {
+          padding: 25px;
+          text-align: center;
+        }
+
+        .come br {
+          display: none;
+        }
+      }
+    </style>
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="start">
+      <div class="row">
+        <img src="logo.png" alt="" width="100" />
+        <span class="title">GranBar Di Stefano</span>
+      </div>
+      <nav>
+        <a href="index.html" id="select">Home</a>
+        <a href="bar.html">Il GranBar</a>
+        <a href="granita.html">La Nostra Granita</a>
+        <a href="menu.html">Menù Completo</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </div>
+    <div class="background">
+      <div class="intro">
+        <span id="intro" style="font-weight: 500"
+          >Benvenuti al GranBar <br />di Stefano</span
+        >
+        <div class="introText" style="width: 600px; max-width: 90%">
+          <span id="intro" style="font-size: 16px">
+            Scoprite il gusto autentico del Salento con le nostre specialità,
+            dalla rinfrescante granita al limone ai deliziosi caffè e dolci. Un
+            luogo dove la tradizione incontra la passione per i sapori.
+          </span>
+        </div>
+        <button id="button1">Esplora il nostro menù</button>
+        <button id="button2">Scopri di più</button>
+      </div>
+    </div>
+    <div class="box">
+      <span class="titleSez"> Le nostre specialità </span>
+      <div
+        class="specialitaText"
+        style="width: 700px; max-width: 100%; margin-top: 10px; color: dimgrey"
+      >
+        <span>
+          Al GranBar di Stefano, ogni prodotto è preparato con cura e passione,
+          utilizzando ingredienti freschi e di qualità. Venite a scoprire
+          un'esperienza di gusto indimenticabile.
+        </span>
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          align-items: start;
+          justify-content: space-between;
+          margin-top: 30px;
+        "
+      >
+        <div class="product" id="1">
+          <div class="img">
+            <img src="granita.jpeg" style="background-size: cover" />
+          </div>
+          <span class="titleProduct"> La granita al limone </span>
+          <span class="descProduct"
+            >La nostra granita al limone è la star indiscussa: fresca e
+            dissetante, creata da una ricetta tramandata da generazioni in
+            generazioni. Un vero abbraccio di freschezza, ideale per ogni
+            momento della giornata</span
+          >
+          <button id="scopri">Scopri di piu</button>
+        </div>
+        <div class="product" id="2">
+          <div class="img">
+            <img src="gelati.jpg" />
+          </div>
+          <span class="titleProduct"> Gelati artigianali</span>
+          <span class="descProduct"
+            >Dal classico espresso napoletano al cappuccino cremoso, ogni tazza
+            è un'esperienza. Selezioniamo le migliorimiscele per garantirvi un
+            caffè aromatico e corposo, preparato a regola d'arte.</span
+          >
+          <button id="scopriGelati">Scopri di piu</button>
+        </div>
+        <div class="product" id="3">
+          <div class="img">
+            <img src="pasticceria.jpg" />
+          </div>
+          <span class="titleProduct">Pasticceria artigianale </span>
+          <span class="descProduct"
+            >Accompagnate il vostro caffè con le nostre deliziose creazioni di
+            pasticceria. Dai cornetti appena sfornati ai dolci tradizionali,
+            ogni morso è un capolavoro di dolcezza e sapore</span
+          >
+          <button id="scopriPasticceria">Scopri di piu</button>
+        </div>
+        <div class="product" id="4">
+          <div class="img">
+            <img src="drink.webp" />
+          </div>
+          <span class="titleProduct"> I nostri drink</span>
+          <span class="descProduct"
+            >Conludete la giornata con un aperitivo rilassante al GranBar. Drink
+            freschi, vini selezionati e stuzzichini gustosi vi aspettano per un
+            momento di puro piacere</span
+          >
+          <button id="scopriDrink">Scopri di piu</button>
+        </div>
+      </div>
+    </div>
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 1px solid rgb(218, 210, 210);
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+      "
+    >
+      <img src="barfuori.jpg" width="600px" />
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          margin: 50px;
+        "
+      >
+        <span class="titleProduct" style="font-size: 32px">Chi siamo</span>
+        <div class="chiSiamoText" style="width: 500px; max-width: 100%">
+          <span class="descProduct">
+            Il GranBar di Stefano nasce dalla passione nei confronti della
+            pasticceria da parte del signor Gigi, il quale insieme alla moglie
+            Maria hanno tramandato l'arte al figlio.
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="come">
+      <section
+        style="
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          align-items: center;
+        "
+      >
+        <span class="titleProduct" style="font-size: 37px; color: dimgray"
+          >Venite a trovarci!</span
+        >
+        <div
+          class="comeText"
+          style="width: 600px; max-width: 100%; text-align: center"
+        >
+          <span class="descProduct">
+            Vi aspettiamo al GranBar di Stefano per un'esperienza di gusto
+            autentica. Non perdete l'occasione di provare i nostri prodotti.
+          </span>
+        </div>
+      </section>
+      <button id="button3">Guarda la gallery</button>
+    </div>
+    <div class="contact" id="contattaci">
+      <div>
+        <span class="titleProduct" style="font-size: 32px">Contattaci</span>
+        <form id="idForm">
+          <span class="descProduct">Nome *</span>
+          <input type="text" name="nome" required id="id-nome" />
+
+          <span class="descProduct">Indirizzo email *</span>
+          <input type="email" name="email" required id="id-email" />
+
+          <span class="descProduct">Messaggio *</span>
+          <textarea name="messaggio" id="id-messaggio" required></textarea>
+
+          <button type="submit" class="button4">Invia modulo</button>
+        </form>
+      </div>
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1526.5533006941362!2d18.1631925880849!3d40.07303418883077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13441be1d64d2b7d%3A0x836a3ec8b418821c!2sGran%20Bar!5e0!3m2!1sit!2sit!4v1783519483268!5m2!1sit!2sit"
+          width="550"
+          height="200"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+        ></iframe>
+        <span class="titleProduct" style="font-size: 25px; margin-bottom: 15px"
+          >Dove siamo</span
+        >
+        <span class="descProduct" style="font-size: 15px"
+          >GranBar di Stefano</span
+        >
+        <span class="descProduct" style="font-size: 15px">Piazza Dante</span>
+        <span class="descProduct" style="font-size: 15px"
+          >73040 Collepasso, Puglia, Italia</span
+        >
+        <span class="descProduct" style="font-size: 15px"
+          ><b>Telefono</b>: 3270016717</span
+        >
+        <span class="descProduct" style="font-size: 15px; margin-bottom: 15px"
+          ><b>Email</b>: cezzasimona@gmail.com</span
+        >
+        <div style="display: flex; flex-direction: row; gap: 10px">
+          <div class="social" id="ig">
+            <img src="instagram.svg" />
+          </div>
+          <div
+            class="social"
+            id="facebook"
+            style="background-color: #0080ff; border-radius: 5px"
+          >
+            <img src="facebook.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const scopri = document
+      .getElementById("scopri")
+      .addEventListener("click", () => {
+        window.location.href = "granita.html";
+      });
+    const gelati = document
+      .getElementById("scopriGelati")
+      .addEventListener("click", () => {
+        window.location.href = "menu.html#gelati";
+      });
+    const pasticceria = document
+      .getElementById("scopriPasticceria")
+      .addEventListener("click", () => {
+        window.location.href = "menu.html#pasticceria";
+      });
+    const drink = document
+      .getElementById("scopriDrink")
+      .addEventListener("click", () => {
+        window.location.href = "menu.html#drink";
+      });
+    const button1 = document
+      .getElementById("button1")
+      .addEventListener("click", function () {
+        window.location.href = "menu.html";
+      });
+    const button2 = document
+      .getElementById("button2")
+      .addEventListener("click", function () {
+        window.location.href = "bar.html";
+      });
+    const button3 = document
+      .getElementById("button3")
+      .addEventListener("click", function () {
+        window.location.href = "gallery.html";
+      });
+    const facebook = document
+      .getElementById("facebook")
+      .addEventListener("click", function () {
+        window.location.href = "https://www.facebook.com/granbardal1959";
+      });
+    const instagram = document
+      .getElementById("ig")
+      .addEventListener("click", function () {
+        window.location.href = "https://www.instagram.com/granbardal1959/";
+      });
+    const formContatto = document.getElementById("idForm");
+
+    formContatto.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const nome = document.getElementById("id-nome").value;
+      const email = document.getElementById("id-email").value;
+      const messaggio = document.getElementById("id-messaggio").value;
+
+      const datiForm = { nome, email, messaggio };
+
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(datiForm),
+        });
+
+        const risultato = await response.json();
+
+        if (response.ok) {
+          window.location.href = "grazie.html";
+          formContatto.reset();
+        } else {
+          const risultato = await response.json();
+          alert("Errore: " + risultato.errore);
+        }
+      } catch (error) {
+        console.error("Errore di connessione:", error);
+        alert("Impossibile collegarsi al server backend.");
+      }
+    });
+  </script>
+</html>

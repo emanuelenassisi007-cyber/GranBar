@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        color: #333;
+        line-height: 1.6;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 12px;
+      }
+
+      button {
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .backgroundBar {
+        margin-top: 50px;
+        background-image: url("bar.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+      }
+
+      .intro {
+        max-width: 100%;
+        display: flex;
+        margin-right: 270px;
+        margin-bottom: 250px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 25px;
+        color: white;
+        opacity: 0;
+        transform: translateY(40px);
+        animation: fadeUp 1s ease-out forwards;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .titolo {
+        font-size: 55px;
+        font-weight: bold;
+      }
+
+      .testo {
+        font-size: 18px;
+      }
+
+      #intro:first-child {
+        font-size: 55px;
+        font-weight: bold;
+      }
+
+      #button1,
+      #button3,
+      #button4 {
+        width: fit-content;
+        align-self: center;
+        padding: 15px 35px;
+        border: none;
+        border-radius: 40px;
+        background: #b8860b;
+        color: white;
+        font-size: 16px;
+      }
+
+      #button1:hover,
+      #button3:hover {
+        background: #9d7208;
+      }
+
+      /* SEZIONI */
+
+      .box {
+        max-width: 1200px;
+        margin: auto;
+        padding: 90px 40px;
+      }
+
+      .come {
+        background: white;
+        padding: 90px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .titleSez {
+        display: block;
+        font-size: 42px;
+        font-weight: bold;
+        text-align: center;
+        color: #333;
+      }
+
+      .titleProduct {
+        display: block;
+        font-size: 28px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .immagine {
+        display: flex;
+        width: 100%;
+        height: 250px;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        overflow: hidden;
+      }
+
+      .immagine img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .descProduct {
+        display: block;
+        color: #666;
+        font-size: 18px;
+      }
+
+      .product {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        flex: 1;
+        min-width: 230px;
+      }
+
+      .product:hover {
+        transform: scale(1.04);
+      }
+
+      .valori {
+        transform: translateY(0);
+        transition: transform ease-out;
+      }
+
+      .valori:hover {
+        transform: translateY(-10px);
+      }
+
+      @media (max-width: 768px) {
+        .backgroundBar {
+          min-height: 100vh;
+          padding: 20px;
+        }
+
+        .intro {
+          margin: 0;
+          padding: 0 20px;
+          max-width: 100%;
+          text-align: center;
+          gap: 20px;
+        }
+
+        .titolo {
+          font-size: 38px;
+        }
+
+        .testo {
+          font-size: 16px;
+        }
+
+        #button1,
+        #button3,
+        #button4 {
+          width: 220px;
+        }
+
+        .box {
+          padding: 60px 20px;
+        }
+
+        .come {
+          padding: 60px 20px;
+        }
+
+        .titleSez {
+          font-size: 30px;
+        }
+
+        .titleProduct {
+          text-align: center;
+        }
+
+        .descProduct {
+          text-align: center;
+        }
+
+        .box > div {
+          flex-direction: column !important;
+          gap: 40px !important;
+        }
+
+        .product {
+          width: 100%;
+          max-width: 380px;
+        }
+
+        .immagine {
+          height: 220px;
+        }
+
+        .valori {
+          width: 100%;
+        }
+      }
+    </style>
+    <title>GranBar</title>
+  </head>
+  <body>
+    <div class="start">
+      <div class="row">
+        <img src="logo.png" alt="" width="100" />
+        <span class="title">GranBar Di Stefano</span>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="bar.html" id="select">Il GranBar</a>
+        <a href="granita.html">La Nostra Granita</a>
+        <a href="menu.html">Menù Completo</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </div>
+    <div
+      class="backgroundBar"
+      style="background-image: url(&quot;bar2.jpg&quot;)"
+    >
+      <div class="intro">
+        <span class="titolo"> Il GranBar dal 1959 </span>
+
+        <span class="testo" style="font-size: 18px">
+          Da oltre sessant'anni accogliamo ogni cliente con la stessa passione,
+          offrendo prodotti artigianali preparati con ingredienti selezionati e
+          il calore della tradizione salentina.
+        </span>
+
+        <button id="button1">Scopri la nostra storia</button>
+      </div>
+    </div>
+
+    <div class="box" id="storia">
+      <span class="titleSez"> La nostra storia </span>
+
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 50px;
+          gap: 80px;
+        "
+      >
+        <img src="storiaBar.jpg" width="1500" />
+
+        <div style="display: flex; flex-direction: column; gap: 25px">
+          <span class="titleProduct"> Una tradizione di famiglia </span>
+
+          <span class="descProduct">
+            Il GranBar nasce nel 1959 grazie alla passione della famiglia
+            Stefano. Da allora continuiamo ogni giorno a preparare granite,
+            caffè, dolci e prodotti artigianali seguendo le ricette che ci hanno
+            reso un punto di riferimento per il territorio.
+          </span>
+
+          <button id="button3">Guarda il menù</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- VALORI -->
+
+    <div class="come">
+      <span class="titleProduct" style="font-size: 38px">
+        I nostri valori
+      </span>
+
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          gap: 40px;
+          flex-wrap: wrap;
+        "
+      >
+        <div class="product">
+          <div class="immagine">
+            <img src="qualita.jpg" />
+          </div>
+
+          <span class="titleProduct"> Qualità </span>
+
+          <span class="descProduct">
+            Utilizziamo solo ingredienti freschi e selezionati.
+          </span>
+        </div>
+
+        <div class="product">
+          <div class="immagine">
+            <img src="tradizione.jpeg" />
+          </div>
+
+          <span class="titleProduct"> Tradizione </span>
+
+          <span class="descProduct"> Ricette tramandate da generazioni. </span>
+        </div>
+
+        <div class="product">
+          <div class="immagine">
+            <img src="accoglienza.jpeg" />
+          </div>
+
+          <span class="titleProduct"> Accoglienza </span>
+
+          <span class="descProduct">
+            Ogni cliente viene accolto come in famiglia.
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOCALE -->
+
+    <div class="box">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 80px;
+        "
+      >
+        <div style="display: flex; flex-direction: column; gap: 25px">
+          <span class="titleProduct" style="font-size: 32px">
+            Un ambiente per tutti
+          </span>
+
+          <span class="descProduct">
+            Il nostro locale è il punto d'incontro ideale per una colazione, una
+            pausa caffè, una granita estiva o un aperitivo tra amici. Un
+            ambiente curato, familiare e accogliente.
+          </span>
+        </div>
+
+        <img src="interno.jpg" width="550" />
+      </div>
+    </div>
+
+    <!-- NUMERI -->
+
+    <div class="come">
+      <span class="titleProduct" style="font-size: 38px">
+        Il GranBar in numeri
+      </span>
+
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          gap: 100px;
+          flex-wrap: wrap;
+        "
+      >
+        <div style="text-align: center" class="valori">
+          <span class="title" style="font-size: 60px"> 65+ </span>
+
+          <span class="descProduct"> Anni di esperienza </span>
+        </div>
+
+        <div style="text-align: center" class="valori">
+          <span class="title" style="font-size: 60px"> 100% </span>
+
+          <span class="descProduct"> Prodotti artigianali </span>
+        </div>
+
+        <div style="text-align: center" class="valori">
+          <span class="title" style="font-size: 60px"> 1000+ </span>
+
+          <span class="descProduct"> Clienti soddisfatti </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PERCHE' -->
+
+    <div class="box">
+      <span class="titleSez"> Perché scegliere il GranBar </span>
+
+      <div style="display: flex; gap: 30px; flex-wrap: wrap; margin-top: 45px">
+        <div class="product">
+          <span class="titleProduct"> 🍋 Ingredienti freschi </span>
+
+          <span class="descProduct">
+            Selezioniamo materie prime di alta qualità.
+          </span>
+        </div>
+
+        <div class="product">
+          <span class="titleProduct"> ☕ Esperienza </span>
+
+          <span class="descProduct"> Oltre sessant'anni di attività. </span>
+        </div>
+
+        <div class="product">
+          <span class="titleProduct"> ❤️ Passione </span>
+
+          <span class="descProduct">
+            Prepariamo ogni prodotto con la massima cura.
+          </span>
+        </div>
+
+        <div class="product">
+          <span class="titleProduct"> 😊 Accoglienza </span>
+
+          <span class="descProduct"> Ci piace far sentire tutti a casa. </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+
+    <div class="come">
+      <span class="titleProduct" style="font-size: 40px">
+        Ti aspettiamo al GranBar
+      </span>
+
+      <span class="descProduct" style="text-align: center; max-width: 700px">
+        Vieni a vivere un'esperienza fatta di gusto, tradizione e ospitalità.
+      </span>
+
+      <button id="button4">Guarda la Gallery</button>
+    </div>
+  </body>
+  <script>
+    const button1 = document
+      .getElementById("button1")
+      .addEventListener("click", () => {
+        window.location.href = "#storia";
+      });
+    const button3 = document
+      .getElementById("button3")
+      .addEventListener("click", () => {
+        window.location.href = "menu.html";
+      });
+    const button4 = document
+      .getElementById("button4")
+      .addEventListener("click", () => {
+        window.location.href = "gallery.html";
+      });
+  </script>
+</html>

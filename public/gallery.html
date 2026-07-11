@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>GranBar</title>
+    <style>
+      .container {
+        display: flex;
+        padding: 40px;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        width: 100%;
+      }
+
+      .gallery-img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+        display: block;
+        transition: transform 0.2s ease;
+      }
+
+      .gallery-img:hover {
+        transform: scale(1.08);
+      }
+      @media (max-width: 768px) {
+        .container {
+          padding: 20px;
+          margin: 0;
+        }
+
+        .gallery {
+          grid-template-columns: 1fr;
+          gap: 15px;
+        }
+
+        .gallery-img {
+          height: 220px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="start">
+      <div class="row">
+        <img src="logo.png" alt="" width="100" />
+        <span class="title">GranBar Di Stefano</span>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="bar.html">Il GranBar</a>
+        <a href="granita.html">La Nostra Granita</a>
+        <a href="menu.html">Menù Completo</a>
+        <a href="gallery.html" id="select">Gallery</a>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="gallery"></div>
+    </div>
+  </body>
+  <script>
+    const gallery = document.querySelector(".gallery");
+    const totale = 50;
+    for (let i = 1; i <= totale; i++) {
+      const img = document.createElement("img");
+      img.src = `gallery/img${i}.jpg`;
+      img.classList.add("gallery-img");
+
+      gallery.appendChild(img);
+    }
+  </script>
+</html>

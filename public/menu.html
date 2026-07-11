@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        color: #333;
+      }
+
+      .backgroundMenu {
+        margin-top: 50px;
+        background-image: url("menu_hero.avif");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .intro {
+        max-width: 100%;
+        display: flex;
+        margin-right: 270px;
+        margin-bottom: 250px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 25px;
+        color: white;
+        opacity: 0;
+        transform: translateY(40px);
+        animation: fadeUp 1s ease-out forwards;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      #intro:first-child {
+        font-size: 58px;
+        font-weight: bold;
+      }
+
+      #intro:last-of-type {
+        font-size: 20px;
+        line-height: 1.6;
+      }
+
+      #button1,
+      #button3 {
+        width: 220px;
+        height: 55px;
+
+        margin: auto;
+
+        border: none;
+        border-radius: 40px;
+
+        background: #f5c542;
+
+        font-size: 17px;
+        font-weight: bold;
+
+        cursor: pointer;
+      }
+
+      #button1:hover,
+      #button3:hover {
+        background: #e6b200;
+      }
+
+      .box {
+        padding: 80px 8%;
+      }
+
+      .titleSez {
+        display: block;
+
+        text-align: center;
+
+        font-size: 40px;
+        font-weight: bold;
+
+        color: #444;
+      }
+
+      .titleProduct {
+        display: block;
+
+        font-size: 28px;
+        font-weight: bold;
+
+        color: #444;
+      }
+
+      .descProduct {
+        display: block;
+
+        margin-top: 15px;
+
+        font-size: 18px;
+
+        color: #666;
+
+        line-height: 1.7;
+      }
+
+      .immagine {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+      }
+
+      .immagine img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .product {
+        flex: 1;
+
+        background: white;
+
+        padding: 30px;
+
+        border-radius: 18px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        gap: 18px;
+
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .product:hover {
+        transform: scale(1.02);
+      }
+
+      .img {
+        width: 220px;
+        height: 220px;
+
+        overflow: hidden;
+
+        border-radius: 18px;
+      }
+
+      .img img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+      }
+
+      .come {
+        padding: 80px 8%;
+
+        background: #fff8e8;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        gap: 25px;
+      }
+
+      .section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 70px;
+      }
+
+      @media (max-width: 768px) {
+        .backgroundMenu {
+          min-height: 100vh;
+          padding: 40px 20px;
+        }
+
+        .intro {
+          margin: 0;
+          padding: 0 20px;
+          width: 100%;
+          text-align: center;
+          gap: 20px;
+        }
+
+        #intro:first-child {
+          font-size: 38px;
+        }
+
+        #intro:last-of-type {
+          font-size: 16px;
+        }
+
+        .box {
+          padding: 60px 20px;
+        }
+
+        .come {
+          padding: 60px 20px;
+        }
+
+        .titleSez {
+          font-size: 30px;
+        }
+
+        .titleProduct {
+          font-size: 24px;
+          text-align: center;
+        }
+
+        .descProduct {
+          font-size: 16px;
+          text-align: center;
+        }
+
+        .box > div,
+        .come > div {
+          flex-direction: column !important;
+          align-items: center !important;
+          gap: 35px !important;
+        }
+
+        .product {
+          width: 100%;
+          max-width: 380px;
+        }
+
+        .img {
+          width: 180px;
+          height: 180px;
+        }
+
+        .immagine {
+          height: 220px;
+        }
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+
+        #button1,
+        #button3 {
+          width: 220px;
+        }
+
+        .section {
+          flex-direction: column;
+        }
+      }
+    </style>
+    <title>GranBar</title>
+  </head>
+  <body>
+    <div class="start">
+      <div class="row">
+        <img src="logo.png" alt="" width="100" />
+        <span class="title">GranBar Di Stefano</span>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="bar.html">Il GranBar</a>
+        <a href="granita.html">La Nostra Granita</a>
+        <a href="menu.html" id="select">Menù Completo</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+    </div>
+    <section class="backgroundMenu">
+      <div class="intro">
+        <span id="intro"> Il nostro Menù </span>
+
+        <span id="intro">
+          Dal caffè del mattino all'aperitivo della sera, scopri tutte le
+          specialità preparate ogni giorno con ingredienti selezionati.
+        </span>
+
+        <button id="button1">Vieni a trovarci</button>
+      </div>
+    </section>
+
+    <!-- INTRODUZIONE -->
+
+    <section class="box">
+      <span class="titleSez"> Sapori per ogni momento della giornata </span>
+
+      <div class="section">
+        <div>
+          <span class="titleProduct"> Qualità e tradizione </span>
+
+          <span class="descProduct">
+            Dal primo caffè della mattina fino ai drink della sera, il nostro
+            menù offre prodotti preparati con cura, utilizzando ingredienti
+            freschi e di qualità.
+          </span>
+        </div>
+
+        <img src="menu.jpg" width="550" />
+      </div>
+    </section>
+
+    <!-- CAFFETTERIA -->
+
+    <section class="box">
+      <span class="titleSez"> Caffetteria </span>
+
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          margin-top: 40px;
+          gap: 60px;
+        "
+      >
+        <div class="product">
+          <div class="img">
+            <img src="espresso.jpg" />
+          </div>
+
+          <span class="titleProduct"> Espresso </span>
+
+          <span class="descProduct">
+            Il classico caffè italiano, preparato al momento.
+          </span>
+        </div>
+
+        <div class="product">
+          <div class="img">
+            <img src="cappuccino.jpg" />
+          </div>
+
+          <span class="titleProduct"> Cappuccino </span>
+
+          <span class="descProduct">
+            Cremoso e perfetto per la colazione.
+          </span>
+        </div>
+
+        <div class="product">
+          <div class="img">
+            <img src="machiato.jpeg" />
+          </div>
+
+          <span class="titleProduct"> Macchiato </span>
+
+          <span class="descProduct">
+            L'equilibrio perfetto tra latte e caffè.
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRANITE -->
+
+    <section class="box">
+      <span class="titleSez"> Le nostre Granite </span>
+
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          margin-top: 40px;
+          gap: 30px;
+        "
+      >
+        <div class="product">
+          <div class="img">
+            <img src="granita.jpeg" />
+          </div>
+          <span class="titleProduct"> Limone </span>
+        </div>
+
+        <div class="product">
+          <div class="img">
+            <img src="granita_fragola.jpg" />
+          </div>
+          <span class="titleProduct"> Fragola </span>
+        </div>
+
+        <div class="product">
+          <div class="img">
+            <img src="granita_menta.jpg" />
+          </div>
+          <span class="titleProduct"> Menta </span>
+        </div>
+
+        <div class="product">
+          <div class="img">
+            <img src="granita_mandorla.jpg" />
+          </div>
+          <span class="titleProduct"> Mandorla </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- GELATI -->
+
+    <section class="come" id="gelati">
+      <span class="titleProduct" style="font-size: 36px">
+        Gelati Artigianali
+      </span>
+
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          gap: 50px;
+          margin-top: 40px;
+        "
+      >
+        <div class="product">
+          <div class="immagine">
+            <img src="gelati_cono.jpeg" />
+          </div>
+          <span class="titleProduct"> Coni </span>
+        </div>
+
+        <div class="product">
+          <div class="immagine">
+            <img src="coppa.jpg" />
+          </div>
+          <span class="titleProduct"> Coppette </span>
+        </div>
+
+        <div class="product">
+          <div class="immagine">
+            <img src="gusti.webp" />
+          </div>
+          <span class="titleProduct"> Tanti Gusti </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PASTICCERIA -->
+
+    <section class="box" id="pasticceria">
+      <span class="titleSez"> Pasticceria </span>
+
+      <div class="section">
+        <img src="pasticceria.jpg" width="500" style="border-radius: 15px" />
+
+        <div>
+          <span class="titleProduct"> Dolci preparati ogni giorno </span>
+
+          <span class="descProduct">
+            Cornetti, biscotti, pasticcini, crostate e tante altre specialità
+            artigianali per accompagnare ogni momento della giornata.
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- APERITIVI -->
+
+    <section class="box" id="drink">
+      <span class="titleSez"> Aperitivi & Drink </span>
+
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          margin-top: 40px;
+          gap: 30px;
+        "
+      >
+        <div class="product">
+          <div class="img">
+            <img src="spritz.jpg" />
+          </div>
+
+          <span class="titleProduct"> Spritz </span>
+        </div>
+
+        <div class="product">
+          <div class="img">
+            <img src="cocktail.jpeg" />
+          </div>
+
+          <span class="titleProduct"> Cocktail </span>
+        </div>
+
+        <div class="product">
+          <div class="img">
+            <img src="vini.jpeg" />
+          </div>
+
+          <span class="titleProduct"> Vini </span>
+        </div>
+
+        <div class="product">
+          <div class="img">
+            <img src="analcolici.jpg" />
+          </div>
+
+          <span class="titleProduct"> Analcolici </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+
+    <section class="come">
+      <span class="titleProduct" style="font-size: 38px">
+        C'è sempre qualcosa di buono da gustare
+      </span>
+
+      <span class="descProduct">
+        Ti aspettiamo al GranBar per farti assaggiare le nostre specialità
+        preparate con passione.
+      </span>
+
+      <button id="button3">Contattaci</button>
+    </section>
+  </body>
+  <script>
+    const vieni = document
+      .getElementById("button1")
+      .addEventListener("click", () => {
+        window.location.href = "index.html#contattaci";
+      });
+    const contact = document
+      .getElementById("button3")
+      .addEventListener("click", () => {
+        window.location.href = "index.html#contattaci";
+      });
+  </script>
+</html>
