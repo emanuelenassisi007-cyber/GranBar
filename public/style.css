@@ -64,6 +64,21 @@ nav a {
   text-decoration: none;
 }
 
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
+
+  nav a::before {
+    content: "•";
+    margin-right: 8px;
+    color: #c2964b;
+  }
+}
+
 #select {
   background-color: #ddc8a3;
   padding-right: 10px;
