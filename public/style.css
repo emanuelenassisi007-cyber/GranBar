@@ -173,9 +173,66 @@ nav a {
   width: 220px;
 }
 
+.end {
+  background-color: #2f2f2f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+  box-sizing: border-box;
+  border-top: 2px solid #c2964b;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-center {
+  align-items: center;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-logo {
+  width: 70px;
+  height: auto;
+}
+
+.footer-title {
+  font-size: 35px;
+  color: #ddc8a3;
+}
+
 @media (max-width: 768px) {
   body {
     padding-top: 20px;
+  }
+
+  .end {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 20px;
+  }
+  .end {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    align-items: center;
+    text-align: center;
   }
 
   .title {

@@ -31,7 +31,7 @@ app.post("/api/contact", async (req, res) => {
   try {
     const { data, error } = await resend.emails.send({
       from: "GranBar <onboarding@resend.dev>",
-      to: ["emanuele.nassisi007@gmail.com"],
+      to: ["emanuele.nassisi007@gmail.com"], //cambiare con la email del bar
       replyTo: email,
       subject: `Nuovo messaggio da ${nome}`,
       text: `
