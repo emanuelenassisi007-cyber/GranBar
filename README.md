@@ -1,4 +1,4 @@
-# BAR WebSite
+# Responsive Website for a Local Bar
 A modern and responsive website developed for a local bar as a real-world project
 The website was designed to provide customers with essential information about the bussiness and to offer a simple and intuitive contact system.
 
