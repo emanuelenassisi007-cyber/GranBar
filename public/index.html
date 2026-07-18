@@ -422,76 +422,116 @@
       </section>
       <button id="button3">Guarda la gallery</button>
     </div>
-    <div class="contact" id="contattaci">
-      <div>
-        <span class="titleProduct" style="font-size: 32px">Contattaci</span>
-        <form id="idForm">
-          <span class="descProduct">Nome *</span>
-          <input type="text" name="nome" required id="id-nome" />
+    <footer class="end" id="contattaci">
+      <!-- PARTE SUPERIORE: Mappa e Contatti -->
+      <div class="footer-top-row">
+        <!-- Blocco Mappa -->
+        <div class="footer-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1526.5533006941362!2d18.1631925880849!3d40.07303418883077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13441be1d64d2b7d%3A0x836a3ec8b418821c!2sGran%20Bar!5e0!3m2!1sit!2sit!4v1783519483268!5m2!1sit!2sit"
+            width="100%"
+            height="250"
+            style="border: 0; border-radius: 8px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
 
-          <span class="descProduct">Indirizzo email *</span>
-          <input type="email" name="email" required id="id-email" />
-
-          <span class="descProduct">Messaggio *</span>
-          <textarea name="messaggio" id="id-messaggio" required></textarea>
-
-          <button type="submit" class="button4">Invia modulo</button>
-        </form>
-      </div>
-      <div>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1526.5533006941362!2d18.1631925880849!3d40.07303418883077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13441be1d64d2b7d%3A0x836a3ec8b418821c!2sGran%20Bar!5e0!3m2!1sit!2sit!4v1783519483268!5m2!1sit!2sit"
-          width="550"
-          height="200"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="strict-origin-when-cross-origin"
-        ></iframe>
-        <span class="titleProduct" style="font-size: 25px; margin-bottom: 15px"
-          >Dove siamo</span
-        >
-        <span class="descProduct" style="font-size: 15px"
-          >GranBar di Stefano</span
-        >
-        <span class="descProduct" style="font-size: 15px">Piazza Dante</span>
-        <span class="descProduct" style="font-size: 15px"
-          >73040 Collepasso, Puglia, Italia</span
-        >
-        <span class="descProduct" style="font-size: 15px"
-          ><b>Telefono</b>: 3270016717</span
-        >
-        <span class="descProduct" style="font-size: 15px; margin-bottom: 15px"
-          ><b>Email</b>: cezzasimona@gmail.com</span
-        >
-        <div style="display: flex; flex-direction: row; gap: 10px">
-          <div class="social" id="ig">
-            <img src="instagram.svg" />
-          </div>
-          <div
-            class="social"
-            id="facebook"
-            style="background-color: #0080ff; border-radius: 5px"
+        <!-- Blocco Informazioni e Social -->
+        <div class="footer-right-info">
+          <span
+            class="titleProduct"
+            style="
+              font-size: 20px;
+              color: #ddc8a3;
+              margin-bottom: 5px;
+              display: block;
+            "
+            >Dove siamo</span
           >
-            <img src="facebook.png" />
+          <span class="descProduct" style="font-size: 14px; display: block"
+            >GranBar di Stefano</span
+          >
+          <span class="descProduct" style="font-size: 14px; display: block"
+            >Piazza Dante</span
+          >
+          <span
+            class="descProduct"
+            style="font-size: 14px; display: block; margin-bottom: 5px"
+            >73040 Collepasso, Puglia, Italia</span
+          >
+          <span class="descProduct" style="font-size: 14px; display: block"
+            ><b>Telefono</b>:
+            <a href="tel:3270016717" style="color: white; text-decoration: none"
+              >3270016717</a
+            ></span
+          >
+          <span
+            class="descProduct"
+            style="font-size: 14px; display: block; margin-bottom: 10px"
+            ><b>Email</b>:
+            <a
+              href="mailto:cezzasimona@gmail.com"
+              style="color: white; text-decoration: none"
+              >cezzasimona@gmail.com</a
+            ></span
+          >
+
+          <!-- Icone Social -->
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              gap: 10px;
+              justify-content: flex-start;
+            "
+            class="social-container"
+          >
+            <div class="social" id="ig">
+              <img
+                src="instagram.svg"
+                style="border-radius: 0; width: 30px; height: 30px"
+              />
+            </div>
+            <div
+              class="social"
+              id="facebook"
+              style="
+                background-color: #0080ff;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: 30px;
+              "
+            >
+              <img
+                src="facebook.png"
+                style="border-radius: 0; max-width: 100%; max-height: 100%"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <footer class="end">
-      <div class="footer-left">
-        <span>© 2026 GranBar di Stefano</span>
-        <span>Tutti i diritti riservati</span>
-      </div>
 
-      <div class="footer-center">
-        <img src="logo.png" alt="GranBar di Stefano" class="footer-logo" />
-        <span class="footer-title">GranBar di Stefano</span>
-      </div>
+      <!-- PARTE INFERIORE: Copyright, Logo e Creatori come prima -->
+      <div class="footer-bottom-row">
+        <div class="footer-left">
+          <span>© 2026 GranBar di Stefano</span>
+          <span>Tutti i diritti riservati</span>
+        </div>
 
-      <div class="footer-right">
-        <span>Sito realizzato da</span>
-        <span><b>Emanuele Nassisi</b> & <b>Samuele Emanuele</b></span>
+        <div class="footer-center">
+          <img src="logo.png" alt="GranBar di Stefano" class="footer-logo" />
+          <span class="footer-title">GranBar di Stefano</span>
+        </div>
+
+        <div class="footer-right">
+          <span>Sito realizzato da</span>
+          <span><b>Emanuele Nassisi</b> & <b>Samuele Emanuele</b></span>
+        </div>
       </div>
     </footer>
   </body>

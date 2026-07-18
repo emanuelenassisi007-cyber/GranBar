@@ -142,6 +142,7 @@ nav a {
   background-color: #68583a;
   border: none;
   cursor: pointer;
+  transition: transform 0.3 ease;
 }
 
 #button3:hover {
@@ -178,11 +179,43 @@ nav a {
   background-color: #2f2f2f;
   color: white;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 60px;
+  flex-direction: column; /* Dispone la riga info e la riga crediti una sotto l'altra */
+  padding: 40px 60px;
   box-sizing: border-box;
   border-top: 2px solid #c2964b;
+  gap: 40px;
+}
+
+/* Riga Superiore: Mappa e Info affiancate */
+.footer-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #444444; /* Linea sottile di separazione interna */
+}
+
+.footer-map {
+  flex: 1;
+  max-width: 550px; /* Riprende la larghezza massima originale che avevi impostato */
+  width: 100%;
+}
+
+.footer-right-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+/* Riga Inferiore: Il tuo stile originale */
+.footer-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .footer-left,
@@ -204,6 +237,7 @@ nav a {
 .footer-logo {
   width: 70px;
   height: auto;
+  border-radius: 0; /* Evita il border-radius generico di 15px sui loghi */
 }
 
 .footer-title {
@@ -211,29 +245,50 @@ nav a {
   color: #ddc8a3;
 }
 
+.descProduct {
+  color: #ffffff;
+}
+
+/* ==========================================
+   VERSIONE RESPONSIVE (MOBILE)
+   ========================================== */
 @media (max-width: 768px) {
   body {
     padding-top: 20px;
   }
 
   .end {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-    padding: 20px;
+    padding: 30px 20px;
+    gap: 30px;
   }
-  .end {
+
+  /* Incolonna la mappa e le info */
+  .footer-top-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    padding-bottom: 25px;
+  }
+
+  /* Incolonna i crediti */
+  .footer-bottom-row {
     flex-direction: column;
     gap: 30px;
     text-align: center;
-    padding: 30px 20px;
   }
 
   .footer-left,
   .footer-center,
-  .footer-right {
+  .footer-right,
+  .footer-right-info {
     align-items: center;
     text-align: center;
+    width: 100%;
+  }
+
+  .footer-right-info .social-container {
+    justify-content: center !important;
   }
 
   .title {
