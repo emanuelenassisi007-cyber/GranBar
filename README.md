@@ -27,7 +27,7 @@ A modern and responsive website developed for **GranBar**, designed to provide c
 
 ## Live Demo
 
-https://TUO-LINK.github.io/NOME-REPOSITORY/
+https://emanuelenassisi007-cyber.github.io/GranBar/
 
 ## Project Structure
 
@@ -58,4 +58,4 @@ Its goal is to offer customers a professional online presence while allowing me 
 
 ---
 
-Made with ❤️ by **Emanuele Nassisi**
+Made with  by **Emanuele Nassisi**
