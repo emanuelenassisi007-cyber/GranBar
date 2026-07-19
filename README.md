@@ -32,14 +32,16 @@ https://emanuelenassisi007-cyber.github.io/GranBar/
 ## Project Structure
 
 ```
-public/
+main/
+│── gallery/
+│── README.md
 │── index.html
-│── about.html
+│── granita.html
+│── bar.html
+│── menu.html
 │── gallery.html
-│── contact.html
-│── css/
-│── js/
-│── images/
+|── style.css
+|── photos...
 ```
 
 ##  Purpose
