@@ -22,7 +22,7 @@ A modern and responsive website developed for **GranBar**, designed to provide c
 
 ## Preview
 
-<img src="public/images/home-preview.png" alt="GranBar Homepage" width="800">
+<img src="public/home.png" alt="GranBar Homepage" width="800">
 
 
 ## Live Demo
