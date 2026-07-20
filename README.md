@@ -40,13 +40,12 @@ main/
 │── gallery/
 │── public/
 │── README.md
-│── index.html
-│── granita.html
 │── bar.html
-│── menu.html
 │── gallery.html
+│── granita.html
+│── index.html
+│── menu.html
 |── style.css
-|── photos...
 ```
 
 ##  Purpose
