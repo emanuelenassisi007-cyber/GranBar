@@ -26,8 +26,7 @@ A modern and responsive website developed for **GranBar**, designed to provide c
 
 ## Preview
 
-<img src="public/home.png" alt="GranBar Homepage" width="800">
-
+<img width="1895" height="902" alt="home" src="https://github.com/user-attachments/assets/28cb9473-8f91-4564-a37c-25aef81c0802" />
 
 ## Live Demo
 
